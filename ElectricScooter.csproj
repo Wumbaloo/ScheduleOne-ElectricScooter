@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>ElectricScooterMod</RootNamespace>
+		<AssemblyName>ElectricScooter</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>0.1.0.0</AssemblyVersion>
+		<FileVersion>0.1.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<!-- Dossier du jeu : adapter si besoin -->
+		<GameDir>G:\SteamLibrary\steamapps\common\Schedule I</GameDir>
+	</PropertyGroup>
+
+	<!-- Toutes les assemblies Il2Cpp générées par MelonLoader (même contenu que la liste du mod Backpack) -->
+	<ItemGroup>
+		<Reference Include="$(GameDir)\MelonLoader\Il2CppAssemblies\*.dll">
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>$(GameDir)\MelonLoader\net6\MelonLoader.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(GameDir)\MelonLoader\net6\0Harmony.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>$(GameDir)\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>$(GameDir)\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+	<!-- AssetBundle de la trottinette (généré par Unity : Tools > Scooter > Build AssetBundle), embarqué dans la DLL -->
+	<!-- Cherche d'abord Bundle\scooter_bundle, sinon la sortie du menu Unity "Assets > Build AssetBundles" -->
+	<PropertyGroup>
+		<ScooterBundle>$(MSBuildProjectDirectory)\Bundle\scooter_bundle</ScooterBundle>
+		<ScooterBundle Condition="!Exists('$(ScooterBundle)')">E:\Developpement\C#\ScheduleOne_UnityProject\Assets\AssetBundles\scooter_bundle</ScooterBundle>
+	</PropertyGroup>
+	<ItemGroup Condition="Exists('$(ScooterBundle)')">
+		<EmbeddedResource Include="$(ScooterBundle)" LogicalName="scooter_bundle" />
+	</ItemGroup>
+
+	<!-- Copie du mod dans le dossier Mods après compilation -->
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;$(GameDir)\Mods&quot;" />
+	</Target>
+</Project>
