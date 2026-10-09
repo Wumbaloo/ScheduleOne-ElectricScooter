@@ -16,7 +16,7 @@ public static class ScooterItem
     public const string ID = "electric_scooter";
     public const string DisplayName = "Electric Scooter";
     public const string Description = "A battery-powered scooter. No pushing required.";
-    public const float Price = 1500f;
+    public const float Price = 2500f;
 
     public static StorableItemDefinition Definition { get; private set; }
 
