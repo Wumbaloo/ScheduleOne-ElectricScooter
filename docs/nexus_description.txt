@@ -1,0 +1,81 @@
+[size=4][b]General description
+[/b][/size]
+This mod adds an [b]Electric Scooter[/b] to the game. It replaces the skateboard when you ride it, and it works with the game's own skating system (jumps, steering, braking).
+
+Features:
+[list]
+[*]Buy it from the [b]skateboard seller at the Shred Shack[/b] (2500$)[/*]
+[*]Below the engage speed, you push with your foot like on a skateboard[/*]
+[*]Above it, the [b]electric motor[/b] takes over: keep the forward key pressed and the scooter accelerates by itself while the rider stays still[/*]
+[*]Custom 3D model, shown on the ground and in your hand[/*]
+[*]Everything is configurable (speed, acceleration, price of the pose, hands, elbows, feet...) and reloadable in game with [b]F9[/b][/*]
+[/list]
+
+[size=4][b]How to use
+[/b][/size]
+To use it, simply :
+[list]
+[*]Go to the [b]Shred Shack[/b] and talk to the skateboard seller[/*]
+[*]Purchase the [b]Electric Scooter[/b][/*]
+[*]Equip it and ride it like a skateboard[/*]
+[*]Reach the engage speed (16 km/h by default), then hold the forward key to let the motor do the work[/*]
+[/list]
+
+[b][size=4]Installation[/size]
+[/b]
+[list]
+[*]Download [url=https://melonwiki.xyz/#/?id=requirements]MelonLoader[/url][/*]
+[*][i]  (prefers [url=https://github.com/LavaGang/MelonLoader.Installer/releases/latest/download/MelonLoader.Installer.exe]automated installation[/url] as it's very straight forward)[/i][/*]
+[*]Drag the ElectricScooter.dll file into
+[quote]steamapps/common/Schedule I/Mods[/quote]
+[/*]
+[*]Enjoy[/*]
+[/list]
+
+
+[size=4][b]Configuration[/b][/size]
+
+After the first launch, the settings are in [b]UserData/MelonPreferences.cfg[/b], category [b][ElectricScooter][/b]. Press [b]F9[/b] in game to reload them while riding.
+[list]
+[*]MotorEnabled: enable or disable the electric assist[/*]
+[*]MotorEngageSpeedKmh: speed above which the motor takes over (default 16)[/*]
+[*]MotorTopSpeedKmh: top speed of the motor (default 40)[/*]
+[*]MotorAcceleration: motor acceleration (default 5)[/*]
+[*]Hands, elbows, feet and body offsets to adjust the rider's pose[/*]
+[/list]
+
+[size=4]Known issues[/size]
+
+Please beware of the following when using the mod:
+[list]
+[*]The scooter is not visible by other players in multiplayer yet[/*]
+[*]The handlebar does not turn with the steering yet[/*]
+[/list]
+
+This has not been tested in multiplayer yet!! Please be aware of possible bugs!
+
+[size=4][b]Roadmap[/b][/size]
+
+For now, I planned to develop: (by order of priorities)
+[list=1]
+[*]Scooter visible by other players in multiplayer[/*]
+[*]Handlebar turning with the steering[/*]
+[*]Motor sound and effects[/*]
+[/list]
+
+
+[size=4][b]Versions[/b][/size]
+
+Works with the :
+[list]
+[*]v0.4.6f13 version of Schedule I[/*]
+[*]v0.7.3 version of MelonLoader[/*]
+[/list]
+
+[size=4][b]Source code[/b][/size]
+
+Open source: [url=https://github.com/Wumbaloo/ScheduleOne-ElectricScooter]github.com/Wumbaloo/ScheduleOne-ElectricScooter[/url]
+
+[size=4][b]Support[/b][/size]
+
+If you encounter any bug or any improvements for this mod, feel free to post bugs here and I'll do my best to solve them!
