@@ -93,14 +93,6 @@ public static class ScooterVisual
         ScooterMotor.Reset();
     }
 
-    /// <summary>Réapplique échelle/rotation/offset depuis la config (appelé après F9).</summary>
-    public static void Refresh()
-    {
-        var rig = Active;
-        if (rig != null && rig.Root != null)
-            ApplyTransform(rig);
-    }
-
     private static void ApplyTransform(ScooterRig rig)
     {
         var t = rig.Root.transform;

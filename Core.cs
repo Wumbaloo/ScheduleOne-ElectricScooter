@@ -10,14 +10,11 @@ public class Core : MelonMod
 {
     public static Core Instance { get; private set; }
 
-    private bool _legacyInputUnavailable;
-
     public override void OnInitializeMelon()
     {
         Instance = this;
-        ScooterConfig.Init();
         HarmonyInstance.PatchAll();
-        LoggerInstance.Msg("Successfully loaded! (F9 in game = reload ElectricScooter settings)");
+        LoggerInstance.Msg("Successfully loaded!");
     }
 
     public override void OnSceneWasLoaded(int buildIndex, string sceneName)
@@ -35,28 +32,6 @@ public class Core : MelonMod
         catch (Exception ex)
         {
             LoggerInstance.Error($"Error initializing scooter item on scene load: {ex}");
-        }
-    }
-
-    public override void OnUpdate()
-    {
-        if (_legacyInputUnavailable)
-            return;
-
-        try
-        {
-            if (Input.GetKeyDown(KeyCode.F9))
-            {
-                ScooterConfig.Reload();
-                ScooterVisual.Refresh();
-                LoggerInstance.Msg("Settings reloaded.");
-            }
-        }
-        catch (Exception)
-        {
-            // Input legacy désactivé dans le jeu : on abandonne le raccourci
-            _legacyInputUnavailable = true;
-            LoggerInstance.Warning("Legacy input unavailable, F9 reload disabled (restart the game to apply settings).");
         }
     }
 }
