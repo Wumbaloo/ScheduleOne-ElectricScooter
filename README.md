@@ -10,8 +10,8 @@ Adds an **Electric Scooter** to Schedule I (MelonLoader, Il2Cpp). Buy it from th
 ## Install
 Drop `ElectricScooter.dll` in the game's `Mods` folder.
 
-## Configuration
-Settings are in `UserData/MelonPreferences.cfg`, category `[ElectricScooter]`. Press **F9** in game to reload them while riding. Motor settings: `MotorEnabled`, `MotorEngageSpeedKmh`, `MotorTopSpeedKmh`, `MotorAcceleration`. Pose settings (hands, elbows, feet, body) can be tuned the same way.
+## Settings
+Pose and motor settings are built into the mod (no config file). Motor: engages at 16 km/h, top speed 40 km/h, acceleration 5 m/s². Change them in `ScooterConfig.cs` and rebuild.
 
 ## Build
 Set `GameDir` in `ElectricScooter.csproj`, then `dotnet build -c Release`. The prebuilt asset bundle is in `Bundle/scooter_bundle` and gets embedded in the DLL.

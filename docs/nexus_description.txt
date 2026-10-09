@@ -8,7 +8,7 @@ Features:
 [*]Below the engage speed, you push with your foot like on a skateboard[/*]
 [*]Above it, the [b]electric motor[/b] takes over: keep the forward key pressed and the scooter accelerates by itself while the rider stays still[/*]
 [*]Custom 3D model, shown on the ground and in your hand[/*]
-[*]Everything is configurable (speed, acceleration, price of the pose, hands, elbows, feet...) and reloadable in game with [b]F9[/b][/*]
+[*]Rider pose (hands, elbows, feet) tuned to match the scooter[/*]
 [/list]
 
 [size=4][b]How to use
@@ -18,7 +18,7 @@ To use it, simply :
 [*]Go to the [b]Shred Shack[/b] and talk to the skateboard seller[/*]
 [*]Purchase the [b]Electric Scooter[/b][/*]
 [*]Equip it and ride it like a skateboard[/*]
-[*]Reach the engage speed (16 km/h by default), then hold the forward key to let the motor do the work[/*]
+[*]Reach 16 km/h, then hold the forward key to let the motor do the work[/*]
 [/list]
 
 [b][size=4]Installation[/size]
@@ -32,17 +32,6 @@ To use it, simply :
 [*]Enjoy[/*]
 [/list]
 
-
-[size=4][b]Configuration[/b][/size]
-
-After the first launch, the settings are in [b]UserData/MelonPreferences.cfg[/b], category [b][ElectricScooter][/b]. Press [b]F9[/b] in game to reload them while riding.
-[list]
-[*]MotorEnabled: enable or disable the electric assist[/*]
-[*]MotorEngageSpeedKmh: speed above which the motor takes over (default 16)[/*]
-[*]MotorTopSpeedKmh: top speed of the motor (default 40)[/*]
-[*]MotorAcceleration: motor acceleration (default 5)[/*]
-[*]Hands, elbows, feet and body offsets to adjust the rider's pose[/*]
-[/list]
 
 [size=4]Known issues[/size]
 

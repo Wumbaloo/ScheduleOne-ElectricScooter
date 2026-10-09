@@ -1,0 +1,1 @@
+Adds an Electric Scooter to the Shred Shack. Push off like on a skateboard, then above 16 km/h the electric motor takes over: hold forward and glide up to 40 km/h while the rider stays still.
